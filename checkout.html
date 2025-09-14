@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2>Checkout</h2>
+            <p>Konfirmasi pesanan dan pilih metode pembayaran.</p>
+        </header>
+
+        <section class="card">
+            <h3>Detail Pesanan</h3>
+            <div class="detail-item">
+                <span>Produk:</span>
+                <p id="product-display"></p>
+            </div>
+            <div class="detail-item">
+                <span>OS:</span>
+                <p id="os-display"></p>
+            </div>
+            <div class="detail-item">
+                <span>Lokasi:</span>
+                <p id="location-display"></p>
+            </div>
+            <div class="detail-item">
+                <span>Harga:</span>
+                <p id="price-display"></p>
+            </div>
+            <div class="detail-item">
+                <span>Biaya Transaksi:</span>
+                <p id="fee-display"></p>
+            </div>
+            <div class="detail-item">
+                <span>Total Bayar:</span>
+                <p id="total-price-display"></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Metode Pembayaran</h3>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-secondary" id="qris-btn">QRIS</button>
+                <button class="btn btn-secondary" id="dana-btn">Dana</button>
+            </div>
+        </section>
+
+        <a href="orders.html" class="link-text">Kembali ke Pesanan</a>
+    </main>
+
+    <div id="custom-modal" class="modal-container">
+        <div class="modal-box">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <button id="modal-close-btn" class="btn btn-primary modal-btn">OKE</button>
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>

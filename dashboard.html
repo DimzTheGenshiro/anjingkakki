@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2 id="welcome-message"></h2>
+            <p>Kelola layanan VPS Anda di sini.</p>
+        </header>
+        
+        <section class="card">
+            <h3 style="text-align: center;">VPS DigitalOcean Terbaik</h3>
+            <p style="text-align: center; color: var(--light-text); font-size: 0.9rem;">
+                Kami menyediakan VPS DigitalOcean berkualitas tinggi dengan performa terbaik untuk segala kebutuhan Anda, dari website hingga aplikasi.
+            </p>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="orders.html" class="btn btn-primary" style="display: inline-block; width: auto; padding: 12px 25px;">Pesan Sekarang</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="custom-modal" class="modal-container">
+        <div class="modal-box">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <button id="modal-close-btn" class="btn btn-primary modal-btn">OKE</button>
+        </div>
+    </div>
+    
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item active">
+            🏠<br>Dashboard
+        </a>
+        <a href="profile.html" class="nav-item">
+            👤<br>Profil
+        </a>
+        <a href="orders.html" class="nav-item">
+            🛒<br>Pesanan
+        </a>
+        <a href="admin_panel.html" id="admin-link" class="nav-item" style="display:none;">
+            ⚙️<br>Admin
+        </a>
+        <button id="logout-btn" class="nav-item">
+            🚪<br>Log Out
+        </button>
+    </nav>
+    <script src="dashboard.js"></script>
+</body>
+</html>

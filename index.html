@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2 id="form-title">Masuk</h2>
+            <p>Silakan masuk atau daftar untuk melanjutkan.</p>
+        </header>
+        
+        <div class="card">
+            <div id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button id="login-btn" class="btn btn-primary">Masuk</button>
+                <a href="#" id="show-register" class="link-text">Belum punya akun? Daftar di sini</a>
+            </div>
+
+            <div id="register-form" style="display:none;">
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <button id="register-btn" class="btn btn-primary">Daftar</button>
+                <a href="#" id="show-login" class="link-text">Sudah punya akun? Masuk di sini</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="custom-modal" class="modal-container">
+        <div class="modal-box">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <button id="modal-close-btn" class="btn btn-primary modal-btn">OKE</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

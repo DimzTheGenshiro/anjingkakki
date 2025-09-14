@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan VPS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2>Pesan VPS</h2>
+            <p>Pilih spesifikasi dan isi detail pesanan.</p>
+        </header>
+
+        <section class="card">
+            <h3>Pilih Spesifikasi</h3>
+            <div class="carousel-container">
+                <div class="carousel" id="ram-carousel">
+                    <div class="carousel-item active" data-ram="2">VPS 2 GB RAM</div>
+                    <div class="carousel-item" data-ram="4">VPS 4 GB RAM</div>
+                    <div class="carousel-item" data-ram="8">VPS 8 GB RAM</div>
+                    <div class="carousel-item" data-ram="16">VPS 16 GB RAM</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="os-select">Sistem Operasi</label>
+                <select id="os-select">
+                    <option value="ubuntu">Ubuntu</option>
+                    <option value="centos">CentOS</option>
+                    <option value="debian">Debian</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location-select">Lokasi Server</label>
+                <select id="location-select">
+                    <option value="sg">Singapura</option>
+                    <option value="jp">Jepang</option>
+                    <option value="us">Amerika Serikat</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Informasi Pelanggan</h3>
+            <div class="form-group">
+                <label for="vps-username">Username VPS</label>
+                <input type="text" id="vps-username" placeholder="Buat username untuk VPS Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="vps-password">Password VPS</label>
+                <input type="password" id="vps-password" placeholder="Buat password untuk VPS Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="buyer-email">Email</label>
+                <input type="email" id="buyer-email" placeholder="contoh@gmail.com" required>
+            </div>
+        </section>
+        
+        <div class="price-display">
+            Harga: <span id="vps-price">Rp20.000</span>
+        </div>
+        <button type="button" id="checkout-btn" class="btn btn-primary">Checkout</button>
+    </main>
+
+    <div id="custom-modal" class="modal-container">
+        <div class="modal-box">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <button id="modal-close-btn" class="btn btn-primary modal-btn">OKE</button>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            🏠<br>Dashboard
+        </a>
+        <a href="profile.html" class="nav-item">
+            👤<br>Profil
+        </a>
+        <a href="orders.html" class="nav-item active">
+            🛒<br>Pesanan
+        </a>
+        <a href="admin_panel.html" id="admin-link" class="nav-item" style="display:none;">
+            ⚙️<br>Admin
+        </a>
+        <button id="logout-btn" class="nav-item">
+            🚪<br>Log Out
+        </button>
+    </nav>
+    <script src="orders.js"></script>
+</body>
+</html>

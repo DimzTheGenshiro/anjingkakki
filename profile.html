@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2>Profil Saya</h2>
+            <p>Kelola informasi akun dan kata sandi Anda.</p>
+        </header>
+
+        <section class="card">
+            <h3>Informasi Akun</h3>
+            <div id="profile-info">
+                <div class="form-group">
+                    <label for="profile-username">Username</label>
+                    <input type="text" id="profile-username" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="profile-status">Status Akun</label>
+                    <input type="text" id="profile-status" readonly>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Ubah Password</h3>
+            <div class="form-group">
+                <label for="old-password">Password Lama</label>
+                <input type="password" id="old-password" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">Password Baru</label>
+                <input type="password" id="new-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-new-password">Konfirmasi Password Baru</label>
+                <input type="password" id="confirm-new-password" required>
+            </div>
+            <button id="change-password-btn" class="btn btn-primary">Simpan Perubahan</button>
+        </section>
+    </main>
+
+    <div id="custom-modal" class="modal-container">
+        <div class="modal-box">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <button id="modal-close-btn" class="btn btn-primary modal-btn">OKE</button>
+        </div>
+    </div>
+    
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            🏠<br>Dashboard
+        </a>
+        <a href="profile.html" class="nav-item active">
+            👤<br>Profil
+        </a>
+        <a href="orders.html" class="nav-item">
+            🛒<br>Pesanan
+        </a>
+        <a href="admin_panel.html" id="admin-link" class="nav-item" style="display:none;">
+            ⚙️<br>Admin
+        </a>
+        <button id="logout-btn" class="nav-item">
+            🚪<br>Log Out
+        </button>
+    </nav>
+    <script src="profile.js"></script>
+</body>
+</html>
